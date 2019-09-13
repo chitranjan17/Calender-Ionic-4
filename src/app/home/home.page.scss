@@ -1,0 +1,73 @@
+
+.day-names{
+    color: #ccc
+}
+
+.horow{    height: 0px;
+    border-width: 1px;
+    box-sizing: content-box;
+    /* color: #ccc; */
+}
+.disabled{
+    color: #cccccc
+}
+.week-date{
+    // color: red;
+}
+.today{
+    // color:#fff;
+    // background-color:blue;
+    // border-radius: 50%;
+    // width: 5vw;
+    // height: 5vh;
+    // justify-content: center;
+    // align-items: center;
+    // vertical-align: middle;
+    // display: flex;
+}
+
+
+
+.week-date {
+    // width: 15%;
+    // height:300px;
+    // background: blue;
+  }
+  
+  .today {
+    width: 100%;
+    padding: 15px;
+    background: blue;
+    border: 1px solid #ccc;
+    color: #fff;
+    border-radius: 50%;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+  .selected{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 12px;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
+.week-col{}
+
+.date-text{
+
+    // color:#fff;
+    // background-color:blue;
+    // border-radius: 50%;
+    // width: 5vw;
+    // height: 5vh;
+    // justify-content: center;
+    // align-items: center;
+    // vertical-align: middle;
+    // display: flex;
+
+    
+}
+
+
+.selected{
+
+}

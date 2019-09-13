@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calender</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="calendar ion-justify-content-center">
+    <ion-row class="ion-align-items-center month-nav">
+      <ion-col size="3" class="ion-align-self-left">
+        <ion-button expand="full" (click)="prevMonth()">&lt;</ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <ion-label>{{ currentDate.format('MMMM') }}</ion-label>
+      </ion-col>
+      <ion-col size="3" class="ion-align-self-right">
+        <ion-button expand="full" (click)="nextMonth()">&gt;</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <br>
+
+
+    <ion-row class="ion-align-items-center year-nav">
+      <ion-col size="3" class="ion-align-self-left">
+        <ion-button expand="full" (click)="prevYear()">&lt;</ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <ion-label>{{ currentDate.format('YYYY') }}</ion-label>
+      </ion-col>
+      <ion-col size="3" class="ion-align-self-right">
+        <ion-button expand="full" (click)="nextYear()">&gt;</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <br>
+    <hr class="horow">
+    <ion-row class="ion-align-items-center day-names  ion-padding">
+      <ion-col *ngFor="let name of dayNames" class="ion-text-center">
+        {{ name }}</ion-col>
+    </ion-row>
+    <hr class="horow">
+    <br>
+
+    <ion-row class="ion-align-items-center ion-padding week" *ngFor="let week of weeks">
+      <ion-col *ngFor="let day of week" class="ion-text-center week-col">
+        <div class="week-date disabled" *ngIf="!isSelectedMonth(day.mDate)">
+          <span class="date-text">{{ day.mDate.date() }}</span>
+        </div>
+        <div class="week-date enabled"  *ngIf="isSelectedMonth(day.mDate)" (click)="selectDate(day)">
+          <span [ngClass]="{ today: day.today, selected: day.selected }">{{ day.mDate.date() }}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
